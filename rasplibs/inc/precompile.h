@@ -37,7 +37,7 @@ extern int passed;
 extern int failed;
 extern int tcs;
 #define TC_BEGIN(func) \
-	printf("--------------------TESTCASE BEGIN %s ---------------------\n", func); \
+	printf("--------------------TEST GROUP BEGIN %s ---------------------\n", func); \
 	tcs++;
 #define VERIFY(x) \
 	(x) ? passed++ : failed++; \
@@ -46,7 +46,7 @@ extern int tcs;
 	printf("--------------------PASSED %s Line: %d --------------------\n", func, line); \
 	passed++;
 #define REPORT(msg) \
-	printf("--%s TESTCASES: %d TESTS PASSED: %d TESTS FAILED: %d-------\n", msg, tcs, passed, failed);
+	printf("--%s VALIDATIONS PASSED=%d VALIDATIONS FAILED=%d-------\n", msg, passed, failed);
 
 
 
